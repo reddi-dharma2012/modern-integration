@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: New-gen-Integartion
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: dharma.mittapalli
+Implementation-Vendor-Id: com.sainsburys.translator
+Build-Jdk: 1.8.0_191
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/translator-service
+Created-By: Maven Integration for Eclipse
+

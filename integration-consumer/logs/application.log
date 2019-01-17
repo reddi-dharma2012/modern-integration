@@ -1,0 +1,671 @@
+2019-01-10 10:16:34.382  INFO 2150 --- [main] c.sainsburys.integration.IntegrationApp  : Starting IntegrationApp on HOLBMAC0278 with PID 2150 (/Users/dharma.mittapalli/eclipse-workspace/integration-consumer/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/integration-consumer)
+2019-01-10 10:16:34.388 DEBUG 2150 --- [main] c.sainsburys.integration.IntegrationApp  : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-10 10:16:34.390  INFO 2150 --- [main] c.sainsburys.integration.IntegrationApp  : No active profile set, falling back to default profiles: default
+2019-01-10 10:16:34.470  INFO 2150 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67a20f67: startup date [Thu Jan 10 10:16:34 GMT 2019]; root of context hierarchy
+2019-01-10 10:16:35.851  INFO 2150 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-10 10:16:35.903  INFO 2150 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$e6705935] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-10 10:16:36.085  INFO 2150 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$12be47b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-10 10:16:36.567  INFO 2150 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-01-10 10:16:36.604  INFO 2150 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-10 10:16:36.605  INFO 2150 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-10 10:16:36.617  INFO 2150 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-10 10:16:36.761  INFO 2150 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-10 10:16:36.761  INFO 2150 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2291 ms
+2019-01-10 10:16:36.989  INFO 2150 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-10 10:16:36.995  INFO 2150 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-10 10:16:36.996  INFO 2150 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-10 10:16:36.996  INFO 2150 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-10 10:16:36.996  INFO 2150 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-10 10:16:37.759  INFO 2150 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-10 10:16:37.760  INFO 2150 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-10 10:16:37.872  INFO 2150 --- [cluster-ClusterId{value='5c371b852e3c000866e233af', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
+2019-01-10 10:16:37.880  INFO 2150 --- [cluster-ClusterId{value='5c371b852e3c000866e233af', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5356577}
+2019-01-10 10:16:37.882  INFO 2150 --- [cluster-ClusterId{value='5c371b852e3c000866e233af', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-10 10:16:38.924  INFO 2150 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67a20f67: startup date [Thu Jan 10 10:16:34 GMT 2019]; root of context hierarchy
+2019-01-10 10:16:39.043  INFO 2150 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-10 10:16:39.048  INFO 2150 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-10 10:16:39.127  INFO 2150 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:16:39.127  INFO 2150 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:16:39.199  INFO 2150 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:16:39.619  INFO 2150 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-10 10:16:39.621  INFO 2150 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-10 10:16:39.629  INFO 2150 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-10 10:16:39.637  INFO 2150 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-10 10:16:39.670  INFO 2150 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my-group
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2019-01-10 10:16:39.773  INFO 2150 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-10 10:16:39.773  INFO 2150 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-10 10:16:39.789  INFO 2150 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2019-01-10 10:16:39.906  INFO 2150 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-01-10 10:16:39.914  INFO 2150 --- [main] c.sainsburys.integration.IntegrationApp  : Started IntegrationApp in 6.053 seconds (JVM running for 6.585)
+2019-01-10 10:16:40.001  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Discovered coordinator 10.152.235.129:9092 (id: 2147483647 rack: null)
+2019-01-10 10:16:40.005  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Revoking previously assigned partitions []
+2019-01-10 10:16:40.005  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2019-01-10 10:16:40.006  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] (Re-)joining group
+2019-01-10 10:16:40.044  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Successfully joined group with generation 1
+2019-01-10 10:16:40.046  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Setting newly assigned partitions [test-0]
+2019-01-10 10:16:40.063  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions assigned: [test-0]
+2019-01-10 10:17:47.772  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=null, sku=123456]'
+2019-01-10 10:17:47.903  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:6}] to localhost:27017
+2019-01-10 10:17:47.929  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=null, sku=123456]'
+2019-01-10 10:17:47.931  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=null, sku=123456]'
+2019-01-10 10:17:47.942  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=null, sku=123456]'
+2019-01-10 10:17:47.942  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=null, sku=124457]'
+2019-01-10 10:17:47.949  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=null, sku=124457]'
+2019-01-10 10:18:57.538  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=Demo, qty=5.2, packSize=5, soldTo=5010011900016, originator=Demo, uom=null, sku=123456]'
+2019-01-10 10:18:57.543  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=Demo, qty=5.2, packSize=5, soldTo=5010011900016, originator=Demo, uom=null, sku=123456]'
+2019-01-10 10:18:57.568  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=null, sku=123456]'
+2019-01-10 10:18:57.574  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=null, sku=123456]'
+2019-01-10 10:18:57.596  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=null, sku=124457]'
+2019-01-10 10:18:57.600  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=null, sku=124457]'
+2019-01-10 10:19:33.979  INFO 2150 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67a20f67: startup date [Thu Jan 10 10:16:34 GMT 2019]; root of context hierarchy
+2019-01-10 10:19:33.982  INFO 2150 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-10 10:19:33.987  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2019-01-10 10:19:34.004  INFO 2150 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2019-01-10 10:19:34.005  INFO 2150 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-10 10:19:34.007  INFO 2150 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-10 10:19:34.010  INFO 2150 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-01-10 10:19:34.017  INFO 2150 --- [Thread-3] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:6}] to localhost:27017 because the pool has been closed.
+2019-01-10 10:20:44.194  INFO 2162 --- [main] c.sainsburys.integration.IntegrationApp  : Starting IntegrationApp on HOLBMAC0278 with PID 2162 (/Users/dharma.mittapalli/eclipse-workspace/integration-consumer/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/integration-consumer)
+2019-01-10 10:20:44.199 DEBUG 2162 --- [main] c.sainsburys.integration.IntegrationApp  : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-10 10:20:44.205  INFO 2162 --- [main] c.sainsburys.integration.IntegrationApp  : No active profile set, falling back to default profiles: default
+2019-01-10 10:20:44.324  INFO 2162 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c130745: startup date [Thu Jan 10 10:20:44 GMT 2019]; root of context hierarchy
+2019-01-10 10:20:45.831  INFO 2162 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-10 10:20:45.881  INFO 2162 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$94aba26b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-10 10:20:46.042  INFO 2162 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c0f990e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-10 10:20:46.563  INFO 2162 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-01-10 10:20:46.602  INFO 2162 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-10 10:20:46.603  INFO 2162 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-10 10:20:46.618  INFO 2162 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-10 10:20:46.796  INFO 2162 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-10 10:20:46.797  INFO 2162 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2473 ms
+2019-01-10 10:20:47.068  INFO 2162 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-10 10:20:47.079  INFO 2162 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-10 10:20:47.080  INFO 2162 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-10 10:20:47.080  INFO 2162 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-10 10:20:47.081  INFO 2162 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-10 10:20:47.947  INFO 2162 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-10 10:20:47.948  INFO 2162 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-10 10:20:48.074  INFO 2162 --- [cluster-ClusterId{value='5c371c7f2e3c00087258c7f7', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
+2019-01-10 10:20:48.085  INFO 2162 --- [cluster-ClusterId{value='5c371c7f2e3c00087258c7f7', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5248078}
+2019-01-10 10:20:48.088  INFO 2162 --- [cluster-ClusterId{value='5c371c7f2e3c00087258c7f7', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-10 10:20:49.063  INFO 2162 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c130745: startup date [Thu Jan 10 10:20:44 GMT 2019]; root of context hierarchy
+2019-01-10 10:20:49.181  INFO 2162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-10 10:20:49.183  INFO 2162 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-10 10:20:49.248  INFO 2162 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:20:49.249  INFO 2162 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:20:49.319  INFO 2162 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:20:50.063  INFO 2162 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-10 10:20:50.066  INFO 2162 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-10 10:20:50.085  INFO 2162 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-10 10:20:50.101  INFO 2162 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-10 10:20:50.201  INFO 2162 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my-group
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2019-01-10 10:20:50.383  INFO 2162 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-10 10:20:50.384  INFO 2162 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-10 10:20:50.395  INFO 2162 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2019-01-10 10:20:50.511  INFO 2162 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-01-10 10:20:50.522  INFO 2162 --- [main] c.sainsburys.integration.IntegrationApp  : Started IntegrationApp in 6.97 seconds (JVM running for 7.683)
+2019-01-10 10:20:50.619  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Discovered coordinator 10.152.235.129:9092 (id: 2147483647 rack: null)
+2019-01-10 10:20:50.625  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Revoking previously assigned partitions []
+2019-01-10 10:20:50.626  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2019-01-10 10:20:50.628  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] (Re-)joining group
+2019-01-10 10:20:50.653  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Successfully joined group with generation 3
+2019-01-10 10:20:50.671  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Setting newly assigned partitions [test-0]
+2019-01-10 10:20:50.675  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions assigned: [test-0]
+2019-01-10 10:21:46.251  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=null, sku=123456]'
+2019-01-10 10:21:46.348  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:11}] to localhost:27017
+2019-01-10 10:21:46.377  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=null, sku=123456]'
+2019-01-10 10:21:46.387  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=null, sku=123456]'
+2019-01-10 10:21:46.391  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=null, sku=123456]'
+2019-01-10 10:21:46.394  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=null, sku=124457]'
+2019-01-10 10:21:46.404  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=null, sku=124457]'
+2019-01-10 10:26:21.723  INFO 2162 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c130745: startup date [Thu Jan 10 10:20:44 GMT 2019]; root of context hierarchy
+2019-01-10 10:26:21.726  INFO 2162 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-10 10:26:21.737  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2019-01-10 10:26:21.748  INFO 2162 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2019-01-10 10:26:21.749  INFO 2162 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-10 10:26:21.751  INFO 2162 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-10 10:26:21.755  INFO 2162 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-01-10 10:26:21.761  INFO 2162 --- [Thread-3] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:11}] to localhost:27017 because the pool has been closed.
+2019-01-10 10:32:16.710  INFO 2203 --- [main] c.sainsburys.integration.IntegrationApp  : Starting IntegrationApp on HOLBMAC0278 with PID 2203 (/Users/dharma.mittapalli/eclipse-workspace/integration-consumer/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/integration-consumer)
+2019-01-10 10:32:16.713 DEBUG 2203 --- [main] c.sainsburys.integration.IntegrationApp  : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-10 10:32:16.716  INFO 2203 --- [main] c.sainsburys.integration.IntegrationApp  : No active profile set, falling back to default profiles: default
+2019-01-10 10:32:16.793  INFO 2203 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a63f509: startup date [Thu Jan 10 10:32:16 GMT 2019]; root of context hierarchy
+2019-01-10 10:32:18.283  INFO 2203 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-10 10:32:18.363  INFO 2203 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$aa34cb8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-10 10:32:18.542  INFO 2203 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d682ba07] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-10 10:32:19.067  INFO 2203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-01-10 10:32:19.119  INFO 2203 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-10 10:32:19.120  INFO 2203 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-10 10:32:19.136  INFO 2203 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-10 10:32:19.298  INFO 2203 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-10 10:32:19.298  INFO 2203 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2505 ms
+2019-01-10 10:32:19.556  INFO 2203 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-10 10:32:19.562  INFO 2203 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-10 10:32:19.563  INFO 2203 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-10 10:32:19.563  INFO 2203 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-10 10:32:19.563  INFO 2203 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-10 10:32:20.299  INFO 2203 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-10 10:32:20.300  INFO 2203 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-10 10:32:20.391  INFO 2203 --- [cluster-ClusterId{value='5c371f342e3c00089b0033bd', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:14}] to localhost:27017
+2019-01-10 10:32:20.397  INFO 2203 --- [cluster-ClusterId{value='5c371f342e3c00089b0033bd', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4257669}
+2019-01-10 10:32:20.399  INFO 2203 --- [cluster-ClusterId{value='5c371f342e3c00089b0033bd', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-10 10:32:21.291  INFO 2203 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a63f509: startup date [Thu Jan 10 10:32:16 GMT 2019]; root of context hierarchy
+2019-01-10 10:32:21.461  INFO 2203 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-10 10:32:21.465  INFO 2203 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-10 10:32:21.589  INFO 2203 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:32:21.589  INFO 2203 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:32:21.713  INFO 2203 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:32:22.188  INFO 2203 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-10 10:32:22.190  INFO 2203 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-10 10:32:22.200  INFO 2203 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-10 10:32:22.208  INFO 2203 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-10 10:32:22.243  INFO 2203 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my-group
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2019-01-10 10:32:22.352  INFO 2203 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-10 10:32:22.352  INFO 2203 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-10 10:32:22.366  INFO 2203 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2019-01-10 10:32:22.454  INFO 2203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-01-10 10:32:22.459  INFO 2203 --- [main] c.sainsburys.integration.IntegrationApp  : Started IntegrationApp in 6.421 seconds (JVM running for 7.003)
+2019-01-10 10:32:22.587  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Discovered coordinator 10.152.235.129:9092 (id: 2147483647 rack: null)
+2019-01-10 10:32:22.601  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Revoking previously assigned partitions []
+2019-01-10 10:32:22.602  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2019-01-10 10:32:22.603  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] (Re-)joining group
+2019-01-10 10:32:22.622  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Successfully joined group with generation 5
+2019-01-10 10:32:22.627  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Setting newly assigned partitions [test-0]
+2019-01-10 10:32:22.630  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions assigned: [test-0]
+2019-01-10 10:33:08.885  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=123456]'
+2019-01-10 10:33:09.064  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:16}] to localhost:27017
+2019-01-10 10:33:09.188  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=123456]'
+2019-01-10 10:33:09.195  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=123456]'
+2019-01-10 10:33:09.200  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=123456]'
+2019-01-10 10:33:09.200  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=Units, sku=124457]'
+2019-01-10 10:33:09.207  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=Units, sku=124457]'
+2019-01-10 10:35:37.262  INFO 2203 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a63f509: startup date [Thu Jan 10 10:32:16 GMT 2019]; root of context hierarchy
+2019-01-10 10:35:37.269  INFO 2203 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-10 10:35:37.275  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2019-01-10 10:35:37.287  INFO 2203 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2019-01-10 10:35:37.288  INFO 2203 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-10 10:35:37.289  INFO 2203 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-10 10:35:37.290  INFO 2203 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-01-10 10:35:37.295  INFO 2203 --- [Thread-3] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:16}] to localhost:27017 because the pool has been closed.
+2019-01-10 10:37:09.535  INFO 2321 --- [main] c.sainsburys.integration.IntegrationApp  : Starting IntegrationApp on HOLBMAC0278 with PID 2321 (/Users/dharma.mittapalli/eclipse-workspace/integration-consumer/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/integration-consumer)
+2019-01-10 10:37:09.542 DEBUG 2321 --- [main] c.sainsburys.integration.IntegrationApp  : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-10 10:37:09.545  INFO 2321 --- [main] c.sainsburys.integration.IntegrationApp  : No active profile set, falling back to default profiles: default
+2019-01-10 10:37:09.637  INFO 2321 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@57c758ac: startup date [Thu Jan 10 10:37:09 GMT 2019]; root of context hierarchy
+2019-01-10 10:37:11.263  INFO 2321 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-10 10:37:11.350  INFO 2321 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$7fbc39a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-10 10:37:11.598  INFO 2321 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ac0a2822] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-10 10:37:12.275  INFO 2321 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-01-10 10:37:12.324  INFO 2321 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-10 10:37:12.325  INFO 2321 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-10 10:37:12.344  INFO 2321 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-10 10:37:12.522  INFO 2321 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-10 10:37:12.523  INFO 2321 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2886 ms
+2019-01-10 10:37:12.759  INFO 2321 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-10 10:37:12.771  INFO 2321 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-10 10:37:12.771  INFO 2321 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-10 10:37:12.772  INFO 2321 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-10 10:37:12.773  INFO 2321 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-10 10:37:13.695  INFO 2321 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-10 10:37:13.696  INFO 2321 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-10 10:37:13.822  INFO 2321 --- [cluster-ClusterId{value='5c3720592e3c000911e2ba6e', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:19}] to localhost:27017
+2019-01-10 10:37:13.829  INFO 2321 --- [cluster-ClusterId{value='5c3720592e3c000911e2ba6e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4729179}
+2019-01-10 10:37:13.831  INFO 2321 --- [cluster-ClusterId{value='5c3720592e3c000911e2ba6e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-10 10:37:14.779  INFO 2321 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@57c758ac: startup date [Thu Jan 10 10:37:09 GMT 2019]; root of context hierarchy
+2019-01-10 10:37:14.907  INFO 2321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-10 10:37:14.910  INFO 2321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-10 10:37:15.004  INFO 2321 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:37:15.005  INFO 2321 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:37:15.138  INFO 2321 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-10 10:37:15.857  INFO 2321 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-10 10:37:15.884  INFO 2321 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-10 10:37:15.899  INFO 2321 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-10 10:37:15.911  INFO 2321 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-10 10:37:15.984  INFO 2321 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my-group
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2019-01-10 10:37:16.254  INFO 2321 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-10 10:37:16.254  INFO 2321 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-10 10:37:16.275  INFO 2321 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2019-01-10 10:37:16.485  INFO 2321 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-01-10 10:37:16.498  INFO 2321 --- [main] c.sainsburys.integration.IntegrationApp  : Started IntegrationApp in 7.634 seconds (JVM running for 8.169)
+2019-01-10 10:37:16.564  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Discovered coordinator 10.152.235.129:9092 (id: 2147483647 rack: null)
+2019-01-10 10:37:16.571  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Revoking previously assigned partitions []
+2019-01-10 10:37:16.571  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2019-01-10 10:37:16.572  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] (Re-)joining group
+2019-01-10 10:37:16.606  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Successfully joined group with generation 7
+2019-01-10 10:37:16.609  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Setting newly assigned partitions [test-0]
+2019-01-10 10:37:16.613  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions assigned: [test-0]
+2019-01-10 10:38:02.972  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=8772254]'
+2019-01-10 10:38:03.157  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:22}] to localhost:27017
+2019-01-10 10:38:03.208  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=8772254]'
+2019-01-10 10:38:03.211  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=8772254]'
+2019-01-10 10:38:03.215  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=8772254]'
+2019-01-10 10:38:03.215  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=Units, sku=8644983]'
+2019-01-10 10:38:03.226  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=Units, sku=8644983]'
+2019-01-10 10:40:22.433  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=8772254]'
+2019-01-10 10:40:22.437  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=8772254]'
+2019-01-10 10:40:22.456  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=8644983]'
+2019-01-10 10:40:22.460  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=8644983]'
+2019-01-10 10:40:22.504  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=Units, sku=8644983]'
+2019-01-10 10:40:22.509  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=Units, sku=8644983]'
+2019-01-10 10:41:52.426  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=8772254]'
+2019-01-10 10:41:52.430  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=8772254]'
+2019-01-10 10:41:52.452  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=8644983]'
+2019-01-10 10:41:52.455  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=8644983]'
+2019-01-10 10:41:52.481  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : received message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=Units, sku=8644745]'
+2019-01-10 10:41:52.491  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.s.i.consumer.ConsumerService           : No sql persisted message='AdviceMessage [shipmentId=75271053, documentId=234243, shipmentDate=Fri Jan 21 00:22:00 GMT 18, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=7.23, packSize=10, soldTo=5010011900016, originator=5017600000007, uom=Units, sku=8644745]'
+2019-01-10 10:53:35.987  INFO 2321 --- [kafka-coordinator-heartbeat-thread | my-group] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Marking the coordinator 10.152.235.129:9092 (id: 2147483647 rack: null) dead
+2019-01-10 10:53:35.998  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Discovered coordinator 10.152.235.129:9092 (id: 2147483647 rack: null)
+2019-01-10 10:53:35.999  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Marking the coordinator 10.152.235.129:9092 (id: 2147483647 rack: null) dead
+2019-01-10 10:53:36.103  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Discovered coordinator 10.152.235.129:9092 (id: 2147483647 rack: null)
+2019-01-10 11:30:42.354  INFO 2321 --- [kafka-coordinator-heartbeat-thread | my-group] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Marking the coordinator 10.152.235.129:9092 (id: 2147483647 rack: null) dead
+2019-01-10 11:30:42.356  INFO 2321 --- [kafka-coordinator-heartbeat-thread | my-group] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Marking the coordinator 10.152.235.129:9092 (id: 2147483647 rack: null) dead
+2019-01-10 11:30:42.356  INFO 2321 --- [kafka-coordinator-heartbeat-thread | my-group] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Marking the coordinator 10.152.235.129:9092 (id: 2147483647 rack: null) dead
+2019-01-10 11:30:42.357  INFO 2321 --- [kafka-coordinator-heartbeat-thread | my-group] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Marking the coordinator 10.152.235.129:9092 (id: 2147483647 rack: null) dead
+2019-01-10 11:30:42.357  INFO 2321 --- [kafka-coordinator-heartbeat-thread | my-group] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Marking the coordinator 10.152.235.129:9092 (id: 2147483647 rack: null) dead
+2019-01-10 11:30:42.358  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=my-group] Asynchronous auto-commit of offsets {test-0=OffsetAndMetadata{offset=30, metadata=''}} failed: Offset commit failed with a retriable exception. You should retry committing offsets. The underlying error was: null
+2019-01-10 11:32:51.993  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:34:07.433  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:35:22.825  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:36:38.580  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:37:54.793  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:39:11.256  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:40:27.507  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:41:43.956  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:43:00.286  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:44:16.724  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:45:33.086  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:46:49.660  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:48:05.811  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:49:21.911  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:50:40.326  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:51:56.519  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:53:12.690  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:54:28.950  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:55:45.272  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:57:01.356  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:58:17.612  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 11:59:33.971  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:00:50.187  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:02:06.222  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:03:22.639  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:04:38.901  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:05:55.191  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:07:11.330  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:08:27.580  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:09:44.096  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:11:00.799  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:12:17.875  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:13:34.119  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:14:51.503  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:16:08.220  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:17:25.146  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:18:41.888  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:19:58.191  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:21:14.407  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:22:30.642  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:23:46.781  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:25:03.084  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:26:19.498  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:27:36.012  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:28:52.554  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:30:08.802  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:31:25.233  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:32:41.807  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:33:58.268  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:35:14.412  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:36:30.649  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:37:46.898  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:39:07.071  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:40:24.465  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:41:52.155  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:43:14.815  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:44:32.096  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:45:48.261  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:47:04.691  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:48:20.941  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:49:37.126  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:50:53.419  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:52:09.822  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:53:25.979  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:54:42.120  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:55:58.246  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:57:14.485  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:58:30.986  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 12:59:47.178  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:01:03.637  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:02:19.756  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:03:35.880  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:04:52.102  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:06:08.175  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:07:24.232  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:08:40.213  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:09:56.484  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:11:12.877  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:12:29.139  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:13:45.261  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:15:01.349  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:16:17.643  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 13:52:27.757  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:06:45.296  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:08:01.920  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:09:36.797  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:10:56.097  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:12:12.289  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:13:28.631  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:14:44.982  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:16:01.380  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:17:17.505  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:18:33.790  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:19:50.124  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:21:06.308  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:22:23.016  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:23:39.175  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:24:55.407  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:26:12.218  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:27:28.553  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:28:45.416  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:30:01.568  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:31:17.701  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:32:33.894  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:33:49.967  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:35:06.149  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:36:23.628  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:37:40.310  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:38:56.726  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:40:13.518  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:41:32.538  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:42:48.662  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:44:04.764  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:45:21.066  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:46:37.282  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:47:53.299  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:49:09.314  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:50:25.435  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:51:41.703  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:52:58.046  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:54:14.274  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:55:30.285  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:56:46.530  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:58:03.119  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 14:59:19.334  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:00:35.648  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:01:51.798  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:03:07.931  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:04:24.322  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:05:40.879  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:06:56.948  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:08:13.150  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:09:29.348  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:10:45.690  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:12:01.834  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:13:18.532  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:14:34.914  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:15:53.716  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:17:14.665  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:18:37.590  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:20:01.255  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:21:20.331  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:22:36.765  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:23:56.929  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:25:21.574  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:26:45.707  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:28:08.415  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:29:32.405  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:30:58.469  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:32:21.542  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:33:44.924  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:35:06.606  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:36:27.750  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:37:55.231  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:39:23.071  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:40:48.220  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:42:04.608  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:43:21.023  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:44:37.158  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:45:53.328  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:47:09.441  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:48:25.881  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:49:42.122  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:50:58.231  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:52:14.497  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:53:30.657  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:54:46.819  WARN 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-1, groupId=my-group] Connection to node 0 could not be established. Broker may not be available.
+2019-01-10 15:55:54.745  INFO 2321 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@57c758ac: startup date [Thu Jan 10 10:37:09 GMT 2019]; root of context hierarchy
+2019-01-10 15:55:54.773  INFO 2321 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-10 15:55:54.792  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2019-01-10 15:55:54.802  INFO 2321 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2019-01-10 15:55:54.803  INFO 2321 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-10 15:55:54.805  INFO 2321 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-10 15:55:54.808  INFO 2321 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-01-10 15:55:54.818  INFO 2321 --- [Thread-3] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:22}] to localhost:27017 because the pool has been closed.

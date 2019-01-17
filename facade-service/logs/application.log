@@ -1,0 +1,660 @@
+2019-01-16 11:32:03.608  INFO 2721 --- [main] c.s.facade.ApplicationInitializer        : Starting ApplicationInitializer on HOLBMAC0278 with PID 2721 (/Users/dharma.mittapalli/eclipse-workspace/facade-service/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/facade-service)
+2019-01-16 11:32:03.612 DEBUG 2721 --- [main] c.s.facade.ApplicationInitializer        : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-16 11:32:03.616  INFO 2721 --- [main] c.s.facade.ApplicationInitializer        : No active profile set, falling back to default profiles: default
+2019-01-16 11:32:03.685  INFO 2721 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34b7ac2f: startup date [Wed Jan 16 11:32:03 GMT 2019]; root of context hierarchy
+2019-01-16 11:32:05.070  INFO 2721 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-16 11:32:05.194  INFO 2721 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$a6fc3f3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 11:32:05.262  INFO 2721 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d34a2db7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 11:32:05.720  INFO 2721 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2019-01-16 11:32:05.753  INFO 2721 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 11:32:05.753  INFO 2721 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-16 11:32:05.764  INFO 2721 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 11:32:05.901  INFO 2721 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 11:32:05.902  INFO 2721 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2217 ms
+2019-01-16 11:32:06.116  INFO 2721 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-16 11:32:06.123  INFO 2721 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-16 11:32:06.124  INFO 2721 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-16 11:32:06.124  INFO 2721 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-16 11:32:06.124  INFO 2721 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-16 11:32:07.049  INFO 2721 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-16 11:32:07.051  INFO 2721 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-16 11:32:07.164  INFO 2721 --- [cluster-ClusterId{value='5c3f16375b88af0aa107ad87', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:4}] to localhost:27017
+2019-01-16 11:32:07.173  INFO 2721 --- [cluster-ClusterId{value='5c3f16375b88af0aa107ad87', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5934272}
+2019-01-16 11:32:07.176  INFO 2721 --- [cluster-ClusterId{value='5c3f16375b88af0aa107ad87', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-16 11:32:07.677  INFO 2721 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34b7ac2f: startup date [Wed Jan 16 11:32:03 GMT 2019]; root of context hierarchy
+2019-01-16 11:32:07.800  INFO 2721 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shipment],methods=[POST]}" onto public java.lang.String com.sainsburys.facade.controller.FacadeController.getShipment(com.sainsburys.facade.models.ShipmentInfo)
+2019-01-16 11:32:07.812  INFO 2721 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-16 11:32:07.814  INFO 2721 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-16 11:32:07.915  INFO 2721 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:32:07.916  INFO 2721 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:32:08.021  INFO 2721 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:32:08.536  INFO 2721 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-16 11:32:08.538  INFO 2721 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-16 11:32:08.545  INFO 2721 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-16 11:32:08.552  INFO 2721 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-16 11:32:08.619  INFO 2721 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+2019-01-16 11:32:08.624  INFO 2721 --- [main] c.s.facade.ApplicationInitializer        : Started ApplicationInitializer in 5.634 seconds (JVM running for 6.238)
+2019-01-16 11:32:58.061  INFO 2721 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-16 11:32:58.062  INFO 2721 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-16 11:32:58.100  INFO 2721 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2019-01-16 11:32:58.454  INFO 2721 --- [http-nio-8086-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.sainsburys.facade.utility.ShipmentInfoSerializer
+
+2019-01-16 11:32:58.540  INFO 2721 --- [http-nio-8086-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-16 11:32:58.541  INFO 2721 --- [http-nio-8086-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-16 11:32:58.809  INFO 2721 --- [http-nio-8086-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2019-01-16 11:33:28.818 ERROR 2721 --- [kafka-producer-network-thread | producer-1] c.s.facade.integration.ProducerCallback  : Error while producing message to topic :null
+2019-01-16 11:33:58.927  INFO 2721 --- [http-nio-8086-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.sainsburys.facade.utility.ShipmentInfoSerializer
+
+2019-01-16 11:33:58.940  INFO 2721 --- [http-nio-8086-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-16 11:33:58.940  INFO 2721 --- [http-nio-8086-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-16 11:33:58.962  INFO 2721 --- [http-nio-8086-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-2] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2019-01-16 11:34:28.963 ERROR 2721 --- [kafka-producer-network-thread | producer-2] c.s.facade.integration.ProducerCallback  : Error while producing message to topic :null
+2019-01-16 11:40:14.811  INFO 2721 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34b7ac2f: startup date [Wed Jan 16 11:32:03 GMT 2019]; root of context hierarchy
+2019-01-16 11:40:14.815  INFO 2721 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-16 11:40:14.816  INFO 2721 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-16 11:40:14.818  INFO 2721 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-16 11:40:14.819  INFO 2721 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-01-16 11:43:43.368  INFO 3665 --- [main] c.s.facade.ApplicationInitializer        : Starting ApplicationInitializer on HOLBMAC0278 with PID 3665 (/Users/dharma.mittapalli/eclipse-workspace/facade-service/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/facade-service)
+2019-01-16 11:43:43.372 DEBUG 3665 --- [main] c.s.facade.ApplicationInitializer        : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-16 11:43:43.377  INFO 3665 --- [main] c.s.facade.ApplicationInitializer        : No active profile set, falling back to default profiles: default
+2019-01-16 11:43:43.488  INFO 3665 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@61230f6a: startup date [Wed Jan 16 11:43:43 GMT 2019]; root of context hierarchy
+2019-01-16 11:43:45.101  INFO 3665 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-16 11:43:45.296  INFO 3665 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$d32179c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 11:43:45.372  INFO 3665 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff6f6841] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 11:43:45.945  INFO 3665 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2019-01-16 11:43:46.041  INFO 3665 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 11:43:46.042  INFO 3665 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-16 11:43:46.066  INFO 3665 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 11:43:46.234  INFO 3665 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 11:43:46.235  INFO 3665 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2747 ms
+2019-01-16 11:43:46.531  INFO 3665 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-16 11:43:46.547  INFO 3665 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-16 11:43:46.547  INFO 3665 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-16 11:43:46.548  INFO 3665 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-16 11:43:46.548  INFO 3665 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-16 11:43:47.642  INFO 3665 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-16 11:43:47.643  INFO 3665 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-16 11:43:47.782  INFO 3665 --- [cluster-ClusterId{value='5c3f18f35b88af0e518b879c', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
+2019-01-16 11:43:47.792  INFO 3665 --- [cluster-ClusterId{value='5c3f18f35b88af0e518b879c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4899095}
+2019-01-16 11:43:47.796  INFO 3665 --- [cluster-ClusterId{value='5c3f18f35b88af0e518b879c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-16 11:43:48.571  INFO 3665 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@61230f6a: startup date [Wed Jan 16 11:43:43 GMT 2019]; root of context hierarchy
+2019-01-16 11:43:48.739  INFO 3665 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shipment],methods=[POST]}" onto public java.lang.String com.sainsburys.facade.controller.FacadeController.getShipment(com.sainsburys.facade.models.ShipmentInfo)
+2019-01-16 11:43:48.750  INFO 3665 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-16 11:43:48.752  INFO 3665 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-16 11:43:48.852  INFO 3665 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:43:48.856  INFO 3665 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:43:48.981  INFO 3665 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:43:49.492  INFO 3665 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-16 11:43:49.495  INFO 3665 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-16 11:43:49.503  INFO 3665 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-16 11:43:49.514  INFO 3665 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-16 11:43:49.594  INFO 3665 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+2019-01-16 11:43:49.601  INFO 3665 --- [main] c.s.facade.ApplicationInitializer        : Started ApplicationInitializer in 6.962 seconds (JVM running for 7.539)
+2019-01-16 11:59:00.564  INFO 3665 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@61230f6a: startup date [Wed Jan 16 11:43:43 GMT 2019]; root of context hierarchy
+2019-01-16 11:59:00.570  INFO 3665 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-16 11:59:00.571  INFO 3665 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-16 11:59:00.572  INFO 3665 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-16 11:59:00.573  INFO 3665 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-01-16 12:13:51.628  INFO 3947 --- [main] c.s.facade.ApplicationInitializer        : Starting ApplicationInitializer on HOLBMAC0278 with PID 3947 (/Users/dharma.mittapalli/eclipse-workspace/facade-service/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/facade-service)
+2019-01-16 12:13:51.632 DEBUG 3947 --- [main] c.s.facade.ApplicationInitializer        : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-16 12:13:51.634  INFO 3947 --- [main] c.s.facade.ApplicationInitializer        : No active profile set, falling back to default profiles: default
+2019-01-16 12:13:51.704  INFO 3947 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70e8f8e: startup date [Wed Jan 16 12:13:51 GMT 2019]; root of context hierarchy
+2019-01-16 12:13:53.137  INFO 3947 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-16 12:13:53.305  INFO 3947 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$ce57c1d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 12:13:53.387  INFO 3947 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$faa5b050] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 12:13:54.004  INFO 3947 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2019-01-16 12:13:54.041  INFO 3947 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 12:13:54.042  INFO 3947 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-16 12:13:54.060  INFO 3947 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 12:13:54.211  INFO 3947 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 12:13:54.211  INFO 3947 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2507 ms
+2019-01-16 12:13:54.454  INFO 3947 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-16 12:13:54.461  INFO 3947 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-16 12:13:54.464  INFO 3947 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-16 12:13:54.464  INFO 3947 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-16 12:13:54.465  INFO 3947 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-16 12:13:55.412  INFO 3947 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-16 12:13:55.412  INFO 3947 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-16 12:13:55.508  INFO 3947 --- [cluster-ClusterId{value='5c3f20035b88af0f6b9b6f19', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:12}] to localhost:27017
+2019-01-16 12:13:55.517  INFO 3947 --- [cluster-ClusterId{value='5c3f20035b88af0f6b9b6f19', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6214947}
+2019-01-16 12:13:55.530  INFO 3947 --- [cluster-ClusterId{value='5c3f20035b88af0f6b9b6f19', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-16 12:13:56.040  INFO 3947 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70e8f8e: startup date [Wed Jan 16 12:13:51 GMT 2019]; root of context hierarchy
+2019-01-16 12:13:56.154  INFO 3947 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shipment],methods=[POST]}" onto public java.lang.String com.sainsburys.facade.controller.FacadeController.getShipment(com.sainsburys.facade.models.ShipmentInfo)
+2019-01-16 12:13:56.168  INFO 3947 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-16 12:13:56.170  INFO 3947 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-16 12:13:56.256  INFO 3947 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 12:13:56.257  INFO 3947 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 12:13:56.343  INFO 3947 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 12:13:56.822  INFO 3947 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-16 12:13:56.824  INFO 3947 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-16 12:13:56.832  INFO 3947 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-16 12:13:56.846  INFO 3947 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-16 12:13:56.925  INFO 3947 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+2019-01-16 12:13:56.930  INFO 3947 --- [main] c.s.facade.ApplicationInitializer        : Started ApplicationInitializer in 5.887 seconds (JVM running for 6.494)
+2019-01-16 12:14:41.520  INFO 3947 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-16 12:14:41.521  INFO 3947 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-16 12:14:41.551  INFO 3947 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2019-01-16 12:14:41.688 DEBUG 3947 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : postShipmentsToMessageBus-shipmentInfo : ShipmentInfo [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=987654]
+2019-01-16 12:14:41.688 DEBUG 3947 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : topic : test
+2019-01-16 12:14:41.688 DEBUG 3947 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : bootstrapServer : localhost:9092
+2019-01-16 12:14:41.688 DEBUG 3947 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : ackConfig : all
+2019-01-16 12:14:41.689 DEBUG 3947 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : retryConfig : 0
+2019-01-16 12:14:41.689 DEBUG 3947 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : keySerializer : org.apache.kafka.common.serialization.StringSerializer
+2019-01-16 12:14:41.729  INFO 3947 --- [http-nio-8086-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.sainsburys.facade.utility.ShipmentInfoSerializer
+
+2019-01-16 12:14:41.816  INFO 3947 --- [http-nio-8086-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-16 12:14:41.817  INFO 3947 --- [http-nio-8086-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-16 12:14:42.022  INFO 3947 --- [http-nio-8086-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2019-01-16 12:15:12.030 ERROR 3947 --- [kafka-producer-network-thread | producer-1] c.s.facade.integration.ProducerCallback  : Error while producing message to topic :null
+2019-01-16 12:15:42.132 DEBUG 3947 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : postShipmentsToMessageBus-shipmentInfo : ShipmentInfo [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=987654]
+2019-01-16 12:15:42.133 DEBUG 3947 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : topic : test
+2019-01-16 12:15:42.133 DEBUG 3947 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : bootstrapServer : localhost:9092
+2019-01-16 12:15:42.133 DEBUG 3947 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : ackConfig : all
+2019-01-16 12:15:42.133 DEBUG 3947 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : retryConfig : 0
+2019-01-16 12:15:42.133 DEBUG 3947 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : keySerializer : org.apache.kafka.common.serialization.StringSerializer
+2019-01-16 12:15:42.134  INFO 3947 --- [http-nio-8086-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.sainsburys.facade.utility.ShipmentInfoSerializer
+
+2019-01-16 12:15:42.143  INFO 3947 --- [http-nio-8086-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-16 12:15:42.144  INFO 3947 --- [http-nio-8086-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-16 12:15:42.159  INFO 3947 --- [http-nio-8086-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-2] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2019-01-16 12:16:12.160 ERROR 3947 --- [kafka-producer-network-thread | producer-2] c.s.facade.integration.ProducerCallback  : Error while producing message to topic :null
+2019-01-16 12:21:20.993  INFO 3947 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70e8f8e: startup date [Wed Jan 16 12:13:51 GMT 2019]; root of context hierarchy
+2019-01-16 12:21:20.996  INFO 3947 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-16 12:21:20.996  INFO 3947 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-16 12:21:20.997  INFO 3947 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-16 12:21:20.998  INFO 3947 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-01-16 12:21:58.114  INFO 5523 --- [main] c.s.facade.ApplicationInitializer        : Starting ApplicationInitializer on HOLBMAC0278 with PID 5523 (/Users/dharma.mittapalli/eclipse-workspace/facade-service/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/facade-service)
+2019-01-16 12:21:58.120 DEBUG 5523 --- [main] c.s.facade.ApplicationInitializer        : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-16 12:21:58.123  INFO 5523 --- [main] c.s.facade.ApplicationInitializer        : No active profile set, falling back to default profiles: default
+2019-01-16 12:21:58.203  INFO 5523 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e4784bc: startup date [Wed Jan 16 12:21:58 GMT 2019]; root of context hierarchy
+2019-01-16 12:21:59.644  INFO 5523 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-16 12:21:59.824  INFO 5523 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$a7ef10ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 12:21:59.905  INFO 5523 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d43cff29] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 12:22:00.502  INFO 5523 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2019-01-16 12:22:00.540  INFO 5523 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 12:22:00.540  INFO 5523 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-16 12:22:00.557  INFO 5523 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 12:22:00.727  INFO 5523 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 12:22:00.728  INFO 5523 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2525 ms
+2019-01-16 12:22:00.973  INFO 5523 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-16 12:22:00.978  INFO 5523 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-16 12:22:00.979  INFO 5523 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-16 12:22:00.980  INFO 5523 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-16 12:22:00.980  INFO 5523 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-16 12:22:02.101  INFO 5523 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-16 12:22:02.102  INFO 5523 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-16 12:22:02.220  INFO 5523 --- [cluster-ClusterId{value='5c3f21ea5b88af159383ce81', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:15}] to localhost:27017
+2019-01-16 12:22:02.228  INFO 5523 --- [cluster-ClusterId{value='5c3f21ea5b88af159383ce81', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5681135}
+2019-01-16 12:22:02.231  INFO 5523 --- [cluster-ClusterId{value='5c3f21ea5b88af159383ce81', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-16 12:22:02.773  INFO 5523 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e4784bc: startup date [Wed Jan 16 12:21:58 GMT 2019]; root of context hierarchy
+2019-01-16 12:22:02.927  INFO 5523 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shipment],methods=[POST]}" onto public java.lang.String com.sainsburys.facade.controller.FacadeController.getShipment(com.sainsburys.facade.models.ShipmentInfo)
+2019-01-16 12:22:02.935  INFO 5523 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-16 12:22:02.937  INFO 5523 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-16 12:22:03.013  INFO 5523 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 12:22:03.014  INFO 5523 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 12:22:03.103  INFO 5523 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 12:22:03.705  INFO 5523 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-16 12:22:03.708  INFO 5523 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-16 12:22:03.715  INFO 5523 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-16 12:22:03.725  INFO 5523 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-16 12:22:03.780  INFO 5523 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+2019-01-16 12:22:03.785  INFO 5523 --- [main] c.s.facade.ApplicationInitializer        : Started ApplicationInitializer in 6.357 seconds (JVM running for 6.946)
+2019-01-16 12:22:20.600  INFO 5523 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-16 12:22:20.600  INFO 5523 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-16 12:22:20.638  INFO 5523 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2019-01-16 12:22:20.936 DEBUG 5523 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : postShipmentsToMessageBus-shipmentInfo : ShipmentInfo [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=987654]
+2019-01-16 12:22:20.937 DEBUG 5523 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : topic : test
+2019-01-16 12:22:20.937 DEBUG 5523 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : bootstrapServer : localhost:9092
+2019-01-16 12:22:20.937 DEBUG 5523 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : ackConfig : all
+2019-01-16 12:22:20.937 DEBUG 5523 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : retryConfig : 0
+2019-01-16 12:22:20.938 DEBUG 5523 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : keySerializer : org.apache.kafka.common.serialization.StringSerializer
+2019-01-16 12:22:20.965  INFO 5523 --- [http-nio-8086-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.sainsburys.facade.utility.ShipmentInfoSerializer
+
+2019-01-16 12:22:21.035  INFO 5523 --- [http-nio-8086-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-16 12:22:21.035  INFO 5523 --- [http-nio-8086-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-16 12:22:21.291  INFO 5523 --- [http-nio-8086-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2019-01-16 12:22:21.338 ERROR 5523 --- [kafka-producer-network-thread | producer-1] c.s.facade.integration.ProducerCallback  : sent message to topic:test partition:0  offset:0
+2019-01-16 12:22:21.490 DEBUG 5523 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : postShipmentsToMessageBus-shipmentInfo : ShipmentInfo [shipmentId=75271052, documentId=324234, shipmentDate=Fri Jan 12 00:12:00 GMT 2018, destinationLocation=5010011900016, sendingLocation=5017600000007, qty=5.2, packSize=5, soldTo=5010011900016, originator=5017600000007, uom=Cases, sku=987654]
+2019-01-16 12:22:21.490 DEBUG 5523 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : topic : test
+2019-01-16 12:22:21.490 DEBUG 5523 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : bootstrapServer : localhost:9092
+2019-01-16 12:22:21.491 DEBUG 5523 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : ackConfig : all
+2019-01-16 12:22:21.491 DEBUG 5523 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : retryConfig : 0
+2019-01-16 12:22:21.491 DEBUG 5523 --- [http-nio-8086-exec-2] c.s.f.integration.PublisherServiceImpl   : keySerializer : org.apache.kafka.common.serialization.StringSerializer
+2019-01-16 12:22:21.491  INFO 5523 --- [http-nio-8086-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.sainsburys.facade.utility.ShipmentInfoSerializer
+
+2019-01-16 12:22:21.498  INFO 5523 --- [http-nio-8086-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-16 12:22:21.499  INFO 5523 --- [http-nio-8086-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-16 12:22:21.513  INFO 5523 --- [http-nio-8086-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-2] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2019-01-16 12:22:21.522 ERROR 5523 --- [kafka-producer-network-thread | producer-2] c.s.facade.integration.ProducerCallback  : sent message to topic:test partition:0  offset:1
+2019-01-16 12:33:27.811  INFO 5523 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e4784bc: startup date [Wed Jan 16 12:21:58 GMT 2019]; root of context hierarchy
+2019-01-16 12:33:27.819  INFO 5523 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-16 12:33:27.819  INFO 5523 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-16 12:33:27.821  INFO 5523 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-16 12:33:27.822  INFO 5523 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2019-01-16 13:30:37.069  INFO 6831 --- [main] c.s.facade.ApplicationInitializer        : Starting ApplicationInitializer on HOLBMAC0278 with PID 6831 (/Users/dharma.mittapalli/eclipse-workspace/facade-service/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/facade-service)
+2019-01-16 13:30:37.077 DEBUG 6831 --- [main] c.s.facade.ApplicationInitializer        : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-16 13:30:37.081  INFO 6831 --- [main] c.s.facade.ApplicationInitializer        : No active profile set, falling back to default profiles: default
+2019-01-16 13:30:37.227  INFO 6831 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c130745: startup date [Wed Jan 16 13:30:37 GMT 2019]; root of context hierarchy
+2019-01-16 13:30:38.906  INFO 6831 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-16 13:30:39.092  INFO 6831 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$b1c79a5a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 13:30:39.185  INFO 6831 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$de1588d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-16 13:30:39.762  INFO 6831 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2019-01-16 13:30:39.801  INFO 6831 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-16 13:30:39.801  INFO 6831 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-16 13:30:39.814  INFO 6831 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-16 13:30:39.954  INFO 6831 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-16 13:30:39.955  INFO 6831 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2728 ms
+2019-01-16 13:30:40.192  INFO 6831 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-16 13:30:40.196  INFO 6831 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-16 13:30:40.198  INFO 6831 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-16 13:30:40.199  INFO 6831 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-16 13:30:40.199  INFO 6831 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-16 13:30:41.120  INFO 6831 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-16 13:30:41.121  INFO 6831 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2019-01-16 13:30:41.217  INFO 6831 --- [cluster-ClusterId{value='5c3f32015b88af1aafcedf65', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:18}] to localhost:27017
+2019-01-16 13:30:41.223  INFO 6831 --- [cluster-ClusterId{value='5c3f32015b88af1aafcedf65', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4525944}
+2019-01-16 13:30:41.225  INFO 6831 --- [cluster-ClusterId{value='5c3f32015b88af1aafcedf65', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2019-01-16 13:30:41.760  INFO 6831 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c130745: startup date [Wed Jan 16 13:30:37 GMT 2019]; root of context hierarchy
+2019-01-16 13:30:41.876  INFO 6831 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shipment],methods=[POST]}" onto public java.lang.String com.sainsburys.facade.controller.FacadeController.getShipment(com.sainsburys.facade.models.ShipmentInfo)
+2019-01-16 13:30:41.885  INFO 6831 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-16 13:30:41.887  INFO 6831 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-16 13:30:41.970  INFO 6831 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 13:30:41.971  INFO 6831 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 13:30:42.064  INFO 6831 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 13:30:42.547  INFO 6831 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-16 13:30:42.550  INFO 6831 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-16 13:30:42.560  INFO 6831 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-16 13:30:42.570  INFO 6831 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-01-16 13:30:42.636  INFO 6831 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+2019-01-16 13:30:42.642  INFO 6831 --- [main] c.s.facade.ApplicationInitializer        : Started ApplicationInitializer in 6.238 seconds (JVM running for 6.929)
+2019-01-16 13:31:13.627  INFO 6831 --- [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-16 13:31:13.632  INFO 6831 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-16 13:31:13.665  INFO 6831 --- [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2019-01-16 13:31:13.847 DEBUG 6831 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : postShipmentsToMessageBus-shipmentInfo : ShipmentInfo [shipmentId=75271051, documentId=424434, shipmentDate=Thu Jan 12 00:12:00 GMT 2017, destinationLocation=5010011900016, sendingLocation=DemoVinayak, qty=5.2, packSize=5, soldTo=5010011900016, originator=DemoVinayak, uom=Cases, sku=987654]
+2019-01-16 13:31:13.848 DEBUG 6831 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : topic : test
+2019-01-16 13:31:13.848 DEBUG 6831 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : bootstrapServer : localhost:9092
+2019-01-16 13:31:13.848 DEBUG 6831 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : ackConfig : all
+2019-01-16 13:31:13.848 DEBUG 6831 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : retryConfig : 0
+2019-01-16 13:31:13.848 DEBUG 6831 --- [http-nio-8086-exec-1] c.s.f.integration.PublisherServiceImpl   : keySerializer : org.apache.kafka.common.serialization.StringSerializer
+2019-01-16 13:31:13.901  INFO 6831 --- [http-nio-8086-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.sainsburys.facade.utility.ShipmentInfoSerializer
+
+2019-01-16 13:31:14.038  INFO 6831 --- [http-nio-8086-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.0
+2019-01-16 13:31:14.039  INFO 6831 --- [http-nio-8086-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : aaa7af6d4a11b29d
+2019-01-16 13:31:14.252  INFO 6831 --- [http-nio-8086-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2019-01-16 13:31:44.256 ERROR 6831 --- [kafka-producer-network-thread | producer-1] c.s.facade.integration.ProducerCallback  : Error while producing message to topic :null
+2019-01-16 13:34:37.876  INFO 6831 --- [Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c130745: startup date [Wed Jan 16 13:30:37 GMT 2019]; root of context hierarchy
+2019-01-16 13:34:37.881  INFO 6831 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2019-01-16 13:34:37.881  INFO 6831 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-01-16 13:34:37.883  INFO 6831 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-16 13:34:37.884  INFO 6831 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans

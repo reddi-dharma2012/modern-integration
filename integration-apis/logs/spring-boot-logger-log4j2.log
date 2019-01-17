@@ -1,0 +1,45 @@
+2019-01-09 10:52:32,974 INFO o.s.b.StartupInfoLogger [main] Starting ApplicationInitializer on HOLBMAC0278 with PID 5270 (/Users/dharma.mittapalli/eclipse-workspace/integration-apis/target/classes started by dharma.mittapalli in /Users/dharma.mittapalli/eclipse-workspace/integration-apis)
+2019-01-09 10:52:32,984 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-01-09 10:52:32,985 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-01-09 10:52:33,138 INFO o.s.c.s.AbstractApplicationContext [main] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d21a74c: startup date [Wed Jan 09 10:52:33 GMT 2019]; root of context hierarchy
+2019-01-09 10:52:34,749 INFO o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [main] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-09 10:52:34,933 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$6061e582] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-09 10:52:35,025 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8cafd3ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-09 10:52:35,529 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8088 (http)
+2019-01-09 10:52:35,548 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8088"]
+2019-01-09 10:52:35,564 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2019-01-09 10:52:35,565 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-09 10:52:35,578 INFO o.a.j.l.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/dharma.mittapalli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-09 10:52:35,795 INFO o.a.j.l.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-01-09 10:52:35,796 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2662 ms
+2019-01-09 10:52:36,027 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2019-01-09 10:52:36,034 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-09 10:52:36,035 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-09 10:52:36,035 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-09 10:52:36,036 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-09 10:52:36,500 INFO c.m.d.l.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-01-09 10:52:36,501 INFO c.m.d.l.SLF4JLogger [main] Adding discovered server localhost:27017 to client view of cluster
+2019-01-09 10:52:36,610 INFO c.m.d.l.SLF4JLogger [cluster-ClusterId{value='5c35d274b67b2d14962c87cd', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:49}] to localhost:27017
+2019-01-09 10:52:36,617 INFO c.m.d.l.SLF4JLogger [cluster-ClusterId{value='5c35d274b67b2d14962c87cd', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 5]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4862786}
+2019-01-09 10:52:36,619 INFO c.m.d.l.SLF4JLogger [cluster-ClusterId{value='5c35d274b67b2d14962c87cd', description='null'}-localhost:27017] Discovered cluster type of STANDALONE
+2019-01-09 10:52:37,853 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d21a74c: startup date [Wed Jan 09 10:52:33 GMT 2019]; root of context hierarchy
+2019-01-09 10:52:38,017 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/getShipments],methods=[GET]}" onto public java.lang.Iterable<com.sainsburys.integration.models.AdviceMessage> com.sainsburys.integration.controllers.IntegrationController.getShipments()
+2019-01-09 10:52:38,025 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/getShipments/{id}],methods=[GET]}" onto public java.util.Optional<com.sainsburys.integration.models.AdviceMessage> com.sainsburys.integration.controllers.IntegrationController.getShipmentById(java.lang.String)
+2019-01-09 10:52:38,033 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-09 10:52:38,035 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-09 10:52:38,123 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-09 10:52:38,123 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-09 10:52:38,196 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-09 10:52:38,659 INFO o.s.j.e.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-01-09 10:52:38,662 INFO o.s.j.e.MBeanExporter [main] Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-09 10:52:38,673 INFO o.s.j.e.MBeanExporter [main] Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-09 10:52:38,682 INFO o.s.c.s.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483547
+2019-01-09 10:52:38,691 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8088"]
+2019-01-09 10:52:38,718 INFO o.a.j.l.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-01-09 10:52:38,743 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8088 (http) with context path ''
+2019-01-09 10:52:38,754 INFO o.s.b.StartupInfoLogger [main] Started ApplicationInitializer in 6.4 seconds (JVM running for 7.258)
+2019-01-09 11:21:07,434 INFO o.s.c.s.AbstractApplicationContext [Thread-3] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d21a74c: startup date [Wed Jan 09 10:52:33 GMT 2019]; root of context hierarchy
+2019-01-09 11:21:07,439 INFO o.s.c.s.DefaultLifecycleProcessor$LifecycleGroup [Thread-3] Stopping beans in phase 2147483547
+2019-01-09 11:21:07,439 INFO o.s.c.s.DefaultLifecycleProcessor$LifecycleGroup [Thread-3] Stopping beans in phase 0
+2019-01-09 11:21:07,442 INFO o.s.j.e.MBeanExporter [Thread-3] Unregistering JMX-exposed beans on shutdown
+2019-01-09 11:21:07,444 INFO o.s.j.s.MBeanRegistrationSupport [Thread-3] Unregistering JMX-exposed beans

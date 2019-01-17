@@ -1,0 +1,2 @@
+docker build -t integration-apis .
+docker run -p 8087:8087 -p 27017:27017 integration-apis
