@@ -26,15 +26,16 @@ public class IntegrationController {
 
 	@RequestMapping(value = "/getShipments", method = RequestMethod.GET)
 	public Iterable<Shipment> getShipments() {
-		CrudRepository<Shipment, String> crudRepository = (CrudRepository<Shipment, String>) shipmentRepositoryService;
+		CrudRepository<Shipment, String> crudRepository = shipmentRepositoryService;
 		return crudRepository.findAll();
 	}
-	
+	/*
 	@RequestMapping(value = "/getShipments/{id}", method = RequestMethod.GET)
 	public Optional<Shipment> getShipmentById(@PathVariable String id) {
-		CrudRepository<Shipment, String> crudRepository = (CrudRepository<Shipment, String>) shipmentRepositoryService;
+		CrudRepository<Shipment, String> crudRepository = shipmentRepositoryService;
 		return crudRepository.findById(id);
 	}
+	*/
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String test() {
 		return "OK";

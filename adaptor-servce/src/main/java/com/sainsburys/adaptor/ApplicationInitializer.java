@@ -13,6 +13,6 @@ public class ApplicationInitializer {
 	public static void main(String[] args) {
 		LOG.info("Initializing Spring Boot Application");
 		SpringApplication.run(ApplicationInitializer.class, args);
-		}
+	}
 	
 }
