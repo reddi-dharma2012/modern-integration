@@ -18,7 +18,7 @@ public class ConsumerService {
 	private static final Logger LOG = LoggerFactory.getLogger(ConsumerService.class);
 	@Autowired
 	public ShipmentInfoDao shipmentRepositoryService;
-
+	
 	@KafkaListener(topics = "test")
 	public void listen(@Payload ShipmentInfo supplierAdviseMessage) {
 		LOG.info("received message='{}'", supplierAdviseMessage);

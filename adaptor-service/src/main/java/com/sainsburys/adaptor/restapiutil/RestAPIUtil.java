@@ -1,4 +1,4 @@
-package com.sainsburys.translator.restapiutil;
+package com.sainsburys.adaptor.restapiutil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,37 +9,34 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
-
-import com.sainsburys.translator.controller.TranslatorController;
-import com.sainsburys.translator.models.ShipmentInfo;
-
+import com.sainsburys.adaptor.models.Shipment;
 
 @Component
 public class RestAPIUtil {
-	
 	private static final Logger LOG = LoggerFactory.getLogger(RestAPIUtil.class);
-	@Value("${facade.api.url}")
-	private String facadeApiUrl;
-	public void postShipments(ShipmentInfo shipmentInfo) {
-		LOG.info("facadeApiUrl: "+facadeApiUrl);
+
+	@Value("${shipment.api.url}")
+	private String apiUrl;
+
+	public void postShipments(Shipment shipmentInfo) {
+		LOG.info("postShipments-shipmentInfo" + shipmentInfo);
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<String> response = null;
 		// Data attached to the request.
-		HttpEntity<ShipmentInfo> requestBody = new HttpEntity<>(shipmentInfo);
+		HttpEntity<Shipment> requestBody = new HttpEntity<>(shipmentInfo);
 		// Send request with POST method.
 		try {
-			LOG.info("Invoking Facde Rest API facadeApiUrl: "+facadeApiUrl);
-			response = restTemplate.postForEntity(facadeApiUrl, requestBody, String.class);
+			LOG.info("apiUrl: " + apiUrl);
+			LOG.info("Invoking Rest API call -: " + apiUrl);
+			response = restTemplate.postForEntity(apiUrl, requestBody, String.class);
 		} catch (RestClientException exp) {
-			System.out.println(exp.getMessage());
+			LOG.error("Exception Occured" + exp);
+			LOG.error(exp.getMessage());
 			exp.printStackTrace();
 		}
-		System.out.println("Response Status code:" + response.getStatusCode());
-
-		// Code = 200.
+		LOG.debug("Response Status code:" + response.getStatusCode());
 		if (response.getStatusCode() == HttpStatus.OK) {
-
-			System.out.println(response.getBody());
+			LOG.debug(response.getBody());
 		}
 
 	}

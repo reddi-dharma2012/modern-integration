@@ -2,10 +2,14 @@ package com.sainsburys.integration.utility;
 
 import java.util.Map;
 import org.apache.kafka.common.serialization.Serializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sainsburys.integration.models.*;
 
 public class ShipmentInfoSerializer implements Serializer<ShipmentInfo> {
+	private static final Logger LOG = LoggerFactory.getLogger(ShipmentInfoSerializer.class);
     @Override
     public void configure(Map<String, ?> configs, boolean isKey) {
     }
@@ -17,7 +21,7 @@ public class ShipmentInfoSerializer implements Serializer<ShipmentInfo> {
         try {
         retVal = objectMapper.writeValueAsString(data).getBytes();
         } catch (Exception exception) {
-        	System.out.println("Error in serializing object"+ data);
+        	LOG.error("Error in serializing object"+ exception.getMessage());
         }
         return retVal;
     }

@@ -22,6 +22,8 @@ public class TranslatorController {
 	
 	@RequestMapping(value = "/shipment", method = RequestMethod.POST)
 	public String getShipment(@RequestBody Shipment shipment) {
+		LOG.info("Entering Translater Controller");
+		LOG.info("shipment:"+shipment);
 		translateShipmentInfoService.postShipments(shipment);
 		return "OK";
 

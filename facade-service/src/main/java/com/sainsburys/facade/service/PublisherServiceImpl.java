@@ -56,8 +56,7 @@ public class PublisherServiceImpl implements PublisherService{
 			producer.send(data, callback);
 		} catch (Exception exp) {
 			LOG.error(exp.getMessage());
-			System.out.println(exp.getMessage());
-		} finally {
+			} finally {
 			if (producer != null)
 				producer.close();
 		}
