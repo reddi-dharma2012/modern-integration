@@ -18,7 +18,10 @@ import com.sainsburys.translator.service.TranslateShipmentInfoService;
 public class TranslatorController {
 	private static final Logger LOG = LoggerFactory.getLogger(TranslatorController.class);
 	@Autowired
-	public TranslateShipmentInfoService translateShipmentInfoService;
+	private TranslateShipmentInfoService translateShipmentInfoService;
+	
+	@Autowired
+	private ItemLookupDao itemLookupDao;
 	
 	@RequestMapping(value = "/shipment", method = RequestMethod.POST)
 	public String getShipment(@RequestBody Shipment shipment) {
@@ -29,5 +32,9 @@ public class TranslatorController {
 
 	}
 	
+	@RequestMapping(value = "/item/{upc}", method = RequestMethod.GET)
+	public Item getItem(@PathVariable("upc") int upc) {
+		return itemLookupDao.getItemDetails(upc);
+	}
 	
 }
