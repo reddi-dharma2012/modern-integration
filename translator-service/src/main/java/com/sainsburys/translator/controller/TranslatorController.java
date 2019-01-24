@@ -25,7 +25,7 @@ public class TranslatorController {
 	
 	@RequestMapping(value = "/shipment", method = RequestMethod.POST)
 	public String getShipment(@RequestBody Shipment shipment) {
-		LOG.info("Entering Translater Controller");
+		LOG.info("Entering Translater Controller"+shipment);
 		LOG.info("shipment:"+shipment);
 		translateShipmentInfoService.postShipments(shipment);
 		return "OK";
@@ -34,6 +34,7 @@ public class TranslatorController {
 	
 	@RequestMapping(value = "/item/{upc}", method = RequestMethod.GET)
 	public Item getItem(@PathVariable("upc") int upc) {
+		LOG.info("Get Item for UPC:"+upc);
 		return itemLookupDao.getItemDetails(upc);
 	}
 	

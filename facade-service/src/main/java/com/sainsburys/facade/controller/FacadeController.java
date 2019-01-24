@@ -22,7 +22,7 @@ public class FacadeController {
 	
 	@RequestMapping(value = "/shipment", method = RequestMethod.POST)
 	public String getShipment(@RequestBody ShipmentInfo shipment) {
-		LOG.info("Entering FacadeController");
+		LOG.info("Entering FacadeController for shipmentInfo" + shipment);
 		publisherService.postShipmentsToMessageBus(shipment);
 		return "OK";
 

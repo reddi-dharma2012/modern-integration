@@ -21,7 +21,7 @@ public class RestAPIUtil {
 	@Value("${facade.api.url}")
 	private String facadeApiUrl;
 	public void postShipments(ShipmentInfo shipmentInfo) {
-		LOG.info("facadeApiUrl: "+facadeApiUrl);
+		LOG.info("Invoke Facade module for shipmentInfo: "+shipmentInfo);
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<String> response = null;
 		// Data attached to the request.
@@ -31,15 +31,15 @@ public class RestAPIUtil {
 			LOG.info("Invoking Facde Rest API facadeApiUrl: "+facadeApiUrl);
 			response = restTemplate.postForEntity(facadeApiUrl, requestBody, String.class);
 		} catch (RestClientException exp) {
-			System.out.println(exp.getMessage());
+			LOG.error("Error while calling Facade Rest API" +exp.getMessage());
 			exp.printStackTrace();
 		}
-		System.out.println("Response Status code:" + response.getStatusCode());
+		LOG.info("Response Status code:" + response.getStatusCode() + "for shipmentInfo" + shipmentInfo);
 
 		// Code = 200.
 		if (response.getStatusCode() == HttpStatus.OK) {
 
-			System.out.println(response.getBody());
+			LOG.info(response.getBody());
 		}
 
 	}

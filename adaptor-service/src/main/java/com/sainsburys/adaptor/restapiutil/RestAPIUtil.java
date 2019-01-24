@@ -34,9 +34,9 @@ public class RestAPIUtil {
 			LOG.error(exp.getMessage());
 			exp.printStackTrace();
 		}
-		LOG.debug("Response Status code:" + response.getStatusCode());
+		LOG.info("Response Status code:" + response.getStatusCode());
 		if (response.getStatusCode() == HttpStatus.OK) {
-			LOG.debug(response.getBody());
+			LOG.info(response.getBody());
 		}
 
 	}

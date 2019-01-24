@@ -42,7 +42,7 @@ public class ShipmentServiceImpl implements ShipmentService {
 				shipment.setPackSize(asn_info[7]);
 				shipment.setDocumentId(asn_info[8]);
 				shipments.add(shipment);
-				LOG.debug("Shipment:" + shipment);
+				LOG.info("Shipment:" + shipment);
 			}
 
 		} catch (IOException e) {

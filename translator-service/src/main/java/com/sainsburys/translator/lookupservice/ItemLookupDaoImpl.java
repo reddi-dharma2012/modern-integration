@@ -21,8 +21,8 @@ public class ItemLookupDaoImpl implements ItemLookupDao {
 
 	public Item getItemDetails(int upc) {
 		String GET_ITEM_SQL = "select * from Item where upc = ?";
-		log.debug("UPC:"+upc);
 		Item item = jdbcTemplate.queryForObject(GET_ITEM_SQL, new Object[] { upc }, new ItemMapper());
+		log.info("Item recieved by item lookup service "+item);
 		return item;
 	}
 

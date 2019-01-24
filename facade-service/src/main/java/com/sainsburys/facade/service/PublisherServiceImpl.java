@@ -36,6 +36,7 @@ public class PublisherServiceImpl implements PublisherService{
 
 	public void postShipmentsToMessageBus(ShipmentInfo shipmentInfo) {
 		LOG.debug("postShipmentsToMessageBus-shipmentInfo : "+shipmentInfo);
+		LOG.info("postShipmentsToMessageBus-shipmentInfo : "+shipmentInfo);
 		LOG.debug("topic : "+topic);
 		LOG.debug("bootstrapServer : "+bootstrapServer);
 		LOG.debug("ackConfig : "+ackConfig);

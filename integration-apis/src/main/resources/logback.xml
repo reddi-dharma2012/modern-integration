@@ -1,6 +1,6 @@
 <configuration>
-	<property name="LOG_PATH"
-		value="/Users/dharma.mittapalli/Documents/logs/application.log" />
+<property name="LOG_PATH"
+		value="/Users/mohitkumar.gupta/Documents/logs/adaptorservice.log" />
 
 	<appender name="jsonAppender"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">

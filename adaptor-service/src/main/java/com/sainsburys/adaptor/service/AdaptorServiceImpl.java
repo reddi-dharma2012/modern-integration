@@ -56,7 +56,9 @@ public class AdaptorServiceImpl implements InitializingBean {
 		WatchService watchService = null;
 		try {
 			path=Paths.get(fileServer);
+			LOG.info("File server path:"+path);
 			watchService = FileSystems.getDefault().newWatchService();
+			LOG.info("Watch service:"+watchService);
 			path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE, StandardWatchEventKinds.ENTRY_DELETE,
 					StandardWatchEventKinds.ENTRY_MODIFY);
 		} catch (IOException e) {
@@ -66,14 +68,14 @@ public class AdaptorServiceImpl implements InitializingBean {
 		try {
 			while ((key = watchService.take()) != null) {
 				for (WatchEvent<?> event : key.pollEvents()) {
-					LOG.debug("Event" + event.kind() + ". File affected: " + event.context() + ".");
+					LOG.info("Event" + event.kind() + ". File affected: " + event.context() + ".");
 					System.out.println(StandardWatchEventKinds.ENTRY_CREATE);
 					if (event.kind() == StandardWatchEventKinds.ENTRY_CREATE) {
-						LOG.debug("Event" + event.kind());
+						LOG.info("Event" + event.kind());
 						List<Shipment> shipments = shipmentService
 								.processShipmentsFromFileServer(fileServer + "/" + event.context());
 						for (Shipment shipmentInfo : shipments) {
-							LOG.debug("Adaptor-Invoke REST API");
+							LOG.info("Adaptor-Invoke REST API" + shipmentInfo);
 							RestAPIUtil.postShipments(shipmentInfo);
 						}
 					}
